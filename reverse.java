@@ -11,8 +11,22 @@ public class reverse {
         reverseNumber(n / 10);
     }
     public static void main(String[] args) {
-        int n = 1234;
+        int n = 10;
         reverseNumber(n);
         System.out.println("Reversed number is : " + rev);
+    }
+}
+
+
+// method - 02
+
+class Reverse{
+    public static int Reverse(int n, int r){
+        if(n == 0) return r;
+        return Reverse(n/10, r*10+n%10);
+    }
+    public static void main(String[] args) {
+        int n = 123;
+        System.out.println(Reverse(n,0));
     }
 }
