@@ -1,15 +1,15 @@
-class jay{
-    public static void jayanta(int n){
+public class decreaseAndIncrease {
+    public static void decAndInc(int n){
         if(n == 1){
             System.out.println(n);
             return;
         }
         System.out.println(n);
-        jayanta(n-1);
+        decAndInc(n-1);
         System.out.println(n);
     }
     public static void main(String[] args) {
         int n = 5;
-        jayanta(n);
+        decAndInc(n);
     }
 }
