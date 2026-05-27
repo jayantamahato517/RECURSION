@@ -1,15 +1,13 @@
 class jay{
-    public static void jayanta(int n){
-        if(n == 1){
-            System.out.println(n);
-            return;
+    public static int jayanta(int x, int n){
+        if(n == 0){
+            return 1;
         }
-        System.out.println(n);
-        jayanta(n-1);
-        System.out.println(n);
+        return x * jayanta(x, n-1);
     }
     public static void main(String[] args) {
+        int x = 2;
         int n = 5;
-        jayanta(n);
+        System.out.println(jayanta(x, n));
     }
 }
