@@ -6,8 +6,24 @@ public class gcd{
         return printGCD(b, a%b);
     }
     public static void main(String[] args) {
+        int a = 16;
+        int b = 28;
+        System.out.println("Gcd of two numbers is : " + printGCD(a, b));
+    }
+}
+
+// iterative version 
+
+class jay{
+    public static void main(String[] args) {
         int a = 12;
         int b = 18;
-        System.out.println("Gcd of two numbers is : " + printGCD(a, b));
+
+        while(b != 0){
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        System.out.println(a);
     }
 }
