@@ -1,12 +1,14 @@
 class jay{
-    public static int sumD(int n){
-        if(n == 0){
-            return 0;
+    public static int maxE(int arr[], int index){
+        if(index == arr.length-1){
+            return arr[index];
         }
-        return (n % 10) + sumD(n / 10);
+        int smallMax = maxE(arr, index+1);
+
+        return Math.max(arr[index], smallMax);
     }
     public static void main(String[] args) {
-        int n = 1234;
-        System.out.println(sumD(n));
+        int arr[] = {3255,24,325,346,3532577,5,46,24627,62,366,243};
+        System.out.println(maxE(arr, 0));
     }
 }

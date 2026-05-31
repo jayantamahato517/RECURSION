@@ -10,7 +10,7 @@ public class maximumElement {
         return Math.max(arr[index], smallMax);
     }
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4};
+        int arr[] = {3,9,2,15,7};
         System.out.println(max(arr,0));
     }
 }
