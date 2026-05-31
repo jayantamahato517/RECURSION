@@ -1,31 +1,19 @@
-class jay{
-    public static int binarysearch(int arr[], int key, int low, int high){
-        //base case
-        if(low > high){
-            return -1;
-        }
-        //find middle
-        int mid = low + (high - low)/2;
+import java.util.Scanner;
 
-        //key found
-        if(arr[mid] == key){
-        return mid;
-    }
-    if(key < arr[mid]){
-        return binarysearch(arr, key, low, mid-1);
-    } else {
-        return binarysearch(arr, key, mid+1, high);
-    }
+class jay{
+    public static int bin(int a , int b){
+        if(b == 0){
+            return a;
+        }
+        return bin(b, a % b);
     }
     public static void main(String[] args) {
-        int arr [] = {1,2,3,4,5};
-        int key = 6;
-        int result = binarysearch(arr, key, 0, arr.length-1);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b = sc.nextInt();
 
-        if(result != -1){
-            System.out.println("Element is found at index : " + result);
-        } else {
-            System.out.println("Element is not found");
-        }
+        System.out.println("The gcd of a and b is : " + bin(a, b));
     }
 }
