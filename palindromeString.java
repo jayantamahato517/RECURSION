@@ -1,4 +1,4 @@
-public class palindrome {
+public class palindromeString {
     public static boolean  printPalindrome(String str, int start, int end){
         if(start >= end){
             return true;
@@ -9,7 +9,7 @@ public class palindrome {
         return printPalindrome(str, start+1, end-1);
     }
     public static void main(String[] args) {
-        String str = "mdam";
+        String str = "madam";
         System.out.println(printPalindrome(str, 0, str.length()-1));
     }
 }
